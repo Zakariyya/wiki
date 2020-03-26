@@ -1,0 +1,383 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>About_wiki_urun</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="项目部署文档">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    <meta name="keywords" content="wiki,文档,项目,部署">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="shortcut icon" href="../../../images/favicon.ico" type="image/x-icon">
+    
+    <link rel="stylesheet" href="../assets/website/page_custom.min.css">
+    <script type="text/javascript" src="http://cdn.zitiao.org/www-tongji.js"></script>
+    
+    <link rel="next" href="base/ubuntu源.html" />
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="gb-page-wrapper">
+    <header class="gb-page-header">
+        <div class="container">
+        
+            <!-- search_input -->
+            <div id="book-search-input" role="search">
+                <input type="text" placeholder="输入并搜索" />
+            </div>
+            <!-- search_input -->
+
+            
+            <a href=".." class="logo">
+                <img src="../images/logo.png">
+                <!-- <img src="images/logo.png"/> -->
+            </a>
+            
+            <a href=".." class="logo">
+                <h1 style="color: #FF5A9C">wiki</h1>
+            </a>
+        
+        </div>
+    </header>
+
+    <div class="gb-page-body">
+        <div class="gb-page-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        
+
+
+
+    
+    <div class="panel panel-default">
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="../" class="list-group-item ">
+        
+
+            
+
+            
+
+            ReadMe
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="about.html" class="list-group-item active">
+        
+
+            
+
+            
+
+            About
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+    <div class="panel panel-default">
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="base/ubuntu源.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            ubuntu 源
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="base/JDK安装.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            JDK 安装
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="base/MySQL安装.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            MySQL 安装
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="base/Redis安装.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis 安装
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="base/Redis哨兵模式安装教程.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis 哨兵模式安装教程
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="base/nginx安装.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            nginx 安装
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+    <div class="panel panel-default">
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="wordpress/wordpress.md" class="list-group-item ">
+        
+
+            
+
+            
+
+            wordpress
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+
+
+
+                    </div>
+                    <div class="col-md-9">
+                        <!-- search_result -->
+                        <div id="book-search-results">
+                            <div class="search-noresults">
+                                
+                                <!-- page -->
+                                
+                                <div class="gb-markdown book-page-inner page-inner">
+                                    <h1 id="about">About</h1>
+<blockquote>
+<p>for wiki
+power by gitbook &amp; plug/theme by zitiao</p>
+</blockquote>
+<ul>
+<li>plug/theme:<a href="https://github.com/zitiaocn/simple" target="_blank">https://github.com/zitiaocn/simple</a></li>
+<li>document:<a href="http://zitiao.org/deploy/" target="_blank">http://zitiao.org/deploy/</a></li>
+</ul>
+<h2 id="background-process">background process</h2>
+<pre><code>setsid gitbook serve .
+</code></pre><h2 id="kill-port">kill port</h2>
+<pre><code>netstat -anp | grep 4000
+kill -9 XXX
+</code></pre><h3 id="step-1">Step 1</h3>
+<p>Run command-line as an Administrator. Then run the below mention command. type your port number in <strong>yourPortNumber</strong></p>
+<blockquote>
+<p>netstat -ano | findstr :<strong>yourPortNumber</strong></p>
+</blockquote>
+<pre><code>C:\Users\yaokunyi&gt;netstat -ano | findstr :35729
+TCP    0.0.0.0:35729          0.0.0.0:0              LISTENING       5396
+TCP    [::]:35729             [::]:0                 LISTENING       5396
+</code></pre><p>See the PID ? In here the port is 5396 (process identifier)</p>
+<h3 id="step-2">Step 2</h3>
+<p>Then you execute this command after identify the PID.
+(/F forcefully terminates the process)</p>
+<blockquote>
+<p>taskkill /PID <strong>typeyourPIDhere</strong> /F</p>
+</blockquote>
+<pre><code>C:\Users\yaokunyi&gt;taskkill /PID 5396 /F
+SUCCESS: The process with PID 5396 has been terminated.
+</code></pre><p>P.S. Run the first command again to check if process is still available or not. You&apos;ll get empty line if process is successfully ended</p>
+<hr>
+<p>By <a href="https://stackoverflow.com/questions/39632667/how-to-kill-a-currently-using-port-on-localhost-in-windows#" target="_blank">stackoverflow  how to kill port</a></p>
+
+                                </div>
+                                
+                                <!-- page -->
+
+                            </div>
+                            <div class="search-results">
+                                <div class="has-results">
+                                    
+                                    <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+                                    <ul class="search-results-list"></ul>
+                                    
+                                </div>
+                                <div class="no-results">
+                                    
+                                    <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <!-- search_result -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="gb-page-footer">
+        <div class="container footer-container">
+            <div class="copyright">
+                © 2018 <a href="https://zakariyya.github.io"> anan </a> | power by <a> zitiao.org</a>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script src="../gitbook/gitbook.js"></script>
+
+    
+    <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+    
+
+
+<script>
+    var gitbook = gitbook || [];
+    gitbook.push(function() {
+        gitbook.page.hasChanged({"page":{"title":"About","level":"1.2","depth":1,"next":{"title":"ubuntu 源","level":"2.1","depth":1,"path":"docs/base/ubuntu源.md","ref":"docs/base/ubuntu源.md","articles":[]},"previous":{"title":"ReadMe","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","-lunr","-search","search-pro","theme-official","sitemap-general"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sitemap-general":{"prefix":"http://zitiao.org/simple/"},"search-pro":{},"highlight":{},"theme-official":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","head_keywords":"wiki,文档,项目,部署","logo":"./images/logo.png","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"wiki","language":"zh-hans","head_title":"_wiki_urun","gitbook":">= 3.0.0","head_description":"项目部署文档"},"file":{"path":"docs/about.md","mtime":"2020-03-26T09:24:50.616Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-26T09:54:50.930Z"},"basePath":"..","book":{"language":""}});
+    });
+</script>
+<script>
+    $('.book-page-inner h1,.book-page-inner h2,.book-page-inner h3,.book-page-inner h4,.book-page-inner h5,.book-page-inner h6').click(function(){
+        var id = $(this).attr('id');
+        if(id) {
+            window.location.hash=id;
+        }
+    });
+</script>
+
+        
+    </body>
+</html>
+

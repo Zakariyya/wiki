@@ -1,0 +1,440 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>ubuntu 源_wiki_urun</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="项目部署文档">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    <meta name="keywords" content="wiki,文档,项目,部署">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="shortcut icon" href="../../../images/favicon.ico" type="image/x-icon">
+    
+    <link rel="stylesheet" href="../../assets/website/page_custom.min.css">
+    <script type="text/javascript" src="http://cdn.zitiao.org/www-tongji.js"></script>
+    
+    <link rel="next" href="JDK安装.html" />
+    
+    
+    <link rel="prev" href="../about.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="gb-page-wrapper">
+    <header class="gb-page-header">
+        <div class="container">
+        
+            <!-- search_input -->
+            <div id="book-search-input" role="search">
+                <input type="text" placeholder="输入并搜索" />
+            </div>
+            <!-- search_input -->
+
+            
+            <a href="../.." class="logo">
+                <img src="../../images/logo.png">
+                <!-- <img src="images/logo.png"/> -->
+            </a>
+            
+            <a href="../.." class="logo">
+                <h1 style="color: #FF5A9C">wiki</h1>
+            </a>
+        
+        </div>
+    </header>
+
+    <div class="gb-page-body">
+        <div class="gb-page-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        
+
+
+
+    
+    <div class="panel panel-default">
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="../../" class="list-group-item ">
+        
+
+            
+
+            
+
+            ReadMe
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../about.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            About
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+    <div class="panel panel-default">
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="ubuntu源.html" class="list-group-item active">
+        
+
+            
+
+            
+
+            ubuntu 源
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="JDK安装.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            JDK 安装
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="MySQL安装.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            MySQL 安装
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="Redis安装.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis 安装
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="Redis哨兵模式安装教程.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis 哨兵模式安装教程
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="nginx安装.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            nginx 安装
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+    <div class="panel panel-default">
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="../wordpress/wordpress.md" class="list-group-item ">
+        
+
+            
+
+            
+
+            wordpress
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+
+
+
+                    </div>
+                    <div class="col-md-9">
+                        <!-- search_result -->
+                        <div id="book-search-results">
+                            <div class="search-noresults">
+                                
+                                <!-- page -->
+                                
+                                <div class="gb-markdown book-page-inner page-inner">
+                                    <h1 id="ubuntu-ali">Ubuntu ali</h1>
+<h2 id="edit-source-list">edit source list</h2>
+<pre><code class="lang-sh">vim /etc/apt/sources.list
+</code></pre>
+<h2 id="delete-all--replace">delete all &amp; replace</h2>
+<h3 id="ali">ali</h3>
+<pre><code class="lang-sh"><span class="hljs-comment"># deb cdrom:[Ubuntu 16.04 LTS _Xenial Xerus_ - Release amd64 (20160420.1)]/ xenial main restricted</span>
+deb-src http://archive.ubuntu.com/ubuntu xenial main restricted <span class="hljs-comment">#Added by software-properties</span>
+deb http://mirrors.aliyun.com/ubuntu/ xenial main restricted
+deb-src http://mirrors.aliyun.com/ubuntu/ xenial main restricted multiverse universe <span class="hljs-comment">#Added by software-properties</span>
+deb http://mirrors.aliyun.com/ubuntu/ xenial-updates main restricted
+deb-src http://mirrors.aliyun.com/ubuntu/ xenial-updates main restricted multiverse universe <span class="hljs-comment">#Added by software-properties</span>
+deb http://mirrors.aliyun.com/ubuntu/ xenial universe
+deb http://mirrors.aliyun.com/ubuntu/ xenial-updates universe
+deb http://mirrors.aliyun.com/ubuntu/ xenial multiverse
+deb http://mirrors.aliyun.com/ubuntu/ xenial-updates multiverse
+deb http://mirrors.aliyun.com/ubuntu/ xenial-backports main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ xenial-backports main restricted universe multiverse <span class="hljs-comment">#Added by software-properties</span>
+deb http://archive.canonical.com/ubuntu xenial partner
+deb-src http://archive.canonical.com/ubuntu xenial partner
+deb http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted
+deb-src http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted multiverse universe <span class="hljs-comment">#Added by software-properties</span>
+deb http://mirrors.aliyun.com/ubuntu/ xenial-security universe
+deb http://mirrors.aliyun.com/ubuntu/ xenial-security multiverse
+</code></pre>
+<h3 id="163-&#x522B;&#x7528;&#x8FD9;&#x4E2A;&#xFF0C;mysql&#x88C5;&#x4E0D;&#x4E0A;">163 &#x522B;&#x7528;&#x8FD9;&#x4E2A;&#xFF0C;mysql&#x88C5;&#x4E0D;&#x4E0A;</h3>
+<pre><code>#163
+deb http://mirrors.163.com/ubuntu/ bionic main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ bionic-security main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ bionic-updates main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ bionic-proposed main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ bionic-backports main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ bionic main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ bionic-security main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ bionic-updates main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ bionic-proposed main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ bionic-backports main restricted universe multiverse
+</code></pre><h2 id="update">update</h2>
+<pre><code class="lang-sh">sudo apt update
+
+sudo apt upgrade
+</code></pre>
+<h2 id="&#x5173;&#x4E8E;ubuntu&#x4E2D;could-not-get-lock-varlibdpkglock&#x89E3;&#x51B3;&#x65B9;&#x6848;">&#x5173;&#x4E8E;Ubuntu&#x4E2D;Could not get lock /var/lib/dpkg/lock&#x89E3;&#x51B3;&#x65B9;&#x6848;</h2>
+<pre><code>E: Could not get lock /var/lib/dpkg/lock - open (11: Resource temporarily unavailable)
+E: Unable to lock the administration directory (/var/lib/dpkg/), is another process using it?
+</code></pre><h3 id="&#x627E;&#x5230;&#x5E76;&#x4E14;&#x6740;&#x6389;&#x6240;&#x6709;&#x7684;apt-get-&#x548C;apt&#x8FDB;&#x7A0B;">&#x627E;&#x5230;&#x5E76;&#x4E14;&#x6740;&#x6389;&#x6240;&#x6709;&#x7684;apt-get &#x548C;apt&#x8FDB;&#x7A0B;</h3>
+<blockquote>
+<p>&#x8FD0;&#x884C;&#x4E0B;&#x9762;&#x7684;&#x547D;&#x4EE4;&#x6765;&#x751F;&#x6210;&#x6240;&#x6709;&#x542B;&#x6709; apt &#x7684;&#x8FDB;&#x7A0B;&#x5217;&#x8868;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;ps&#x548C;grep&#x547D;&#x4EE4;&#x5E76;&#x7528;&#x7BA1;&#x9053;&#x7EC4;&#x5408;&#x6765;&#x5F97;&#x5230;&#x542B;&#x6709;apt&#x6216;&#x8005;apt-get&#x7684;&#x8FDB;&#x7A0B;&#x3002;</p>
+</blockquote>
+<pre><code>ps -A | grep apt
+</code></pre><p>&#x627E;&#x51FA;&#x6240;&#x6709;&#x7684; apt &#x4EE5;&#x53CA; apt-get &#x8FDB;&#x7A0B;</p>
+<pre><code>
+sudo kill -9 processnumber
+
+&#x6216;&#x8005;
+sudo kill -SIGKILL processnumber
+</code></pre><hr>
+<p>&#x6BD4;&#x5982;&#xFF0C;&#x4E0B;&#x9762;&#x547D;&#x4EE4;&#x4E2D;&#x7684;
+ 9
+&#x662F; 
+ SIGKILL
+&#x7684;&#x4FE1;&#x53F7;&#x6570;&#xFF0C;&#x5B83;&#x4F1A;&#x6740;&#x6389;&#x7B2C;&#x4E00;&#x4E2A; apt &#x8FDB;&#x7A0B;</p>
+<pre><code>
+sudo kill -9 &#x8FDB;&#x7A0B;ID
+
+&#x6216;&#x8005;
+sudo kill -SIGKILL  &#x8FDB;&#x7A0B;ID
+</code></pre><h3 id="&#x5220;&#x9664;&#x9501;&#x5B9A;&#x6587;&#x4EF6;">&#x5220;&#x9664;&#x9501;&#x5B9A;&#x6587;&#x4EF6;</h3>
+<p>&#x9501;&#x5B9A;&#x7684;&#x6587;&#x4EF6;&#x4F1A;&#x963B;&#x6B62; Linux &#x7CFB;&#x7EDF;&#x4E2D;&#x67D0;&#x4E9B;&#x6587;&#x4EF6;&#x6216;&#x8005;&#x6570;&#x636E;&#x7684;&#x8BBF;&#x95EE;&#xFF0C;&#x8FD9;&#x4E2A;&#x6982;&#x5FF5;&#x4E5F;&#x5B58;&#x5728;&#x4E8E; Windows &#x6216;&#x8005;&#x5176;&#x4ED6;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4E2D;&#x3002;</p>
+<p>&#x4E00;&#x65E6;&#x4F60;&#x8FD0;&#x884C;&#x4E86; <strong>apt-get</strong> &#x6216;&#x8005; <strong>apt</strong> &#x547D;&#x4EE4;&#xFF0C;&#x9501;&#x5B9A;&#x6587;&#x4EF6;&#x5C06;&#x4F1A;&#x521B;&#x5EFA;&#x4E8E; <strong>/var/lib/apt/lists/&#x3001;/var/lib/dpkg/&#x3001;/var/cache/apt/archives/</strong> &#x4E2D;&#x3002;</p>
+<p>&#x8FD9;&#x6709;&#x52A9;&#x4E8E;&#x8FD0;&#x884C;&#x4E2D;&#x7684; <strong>apt-get</strong> &#x6216;&#x8005; <strong>apt</strong> &#x8FDB;&#x7A0B;&#x80FD;&#x591F;&#x907F;&#x514D;&#x88AB;&#x5176;&#x5B83;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x76F8;&#x540C;&#x6587;&#x4EF6;&#x7684;&#x7528;&#x6237;&#x6216;&#x8005;&#x7CFB;&#x7EDF;&#x8FDB;&#x7A0B;&#x6240;&#x6253;&#x65AD;&#x3002;&#x5F53;&#x8BE5;&#x8FDB;&#x7A0B;&#x6267;&#x884C;&#x5B8C;&#x6BD5;&#x540E;&#xFF0C;&#x9501;&#x5B9A;&#x6587;&#x4EF6;&#x5C06;&#x4F1A;&#x5220;&#x9664;&#x3002;</p>
+<p>&#x5F53;&#x4F60;&#x6CA1;&#x6709;&#x770B;&#x5230; <strong>apt-get</strong> &#x6216;&#x8005; <strong>apt</strong> &#x8FDB;&#x7A0B;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x5728;&#x4E0A;&#x9762;&#x4E24;&#x4E2A;&#x4E0D;&#x540C;&#x7684;&#x6587;&#x4EF6;&#x5939;&#x4E2D;&#x770B;&#x5230;&#x4E86;&#x9501;&#x5B9A;&#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#x8FDB;&#x7A0B;&#x7531;&#x4E8E;&#x67D0;&#x4E2A;&#x539F;&#x56E0;&#x88AB;&#x6740;&#x6389;&#x4E86;&#xFF0C;&#x56E0;&#x6B64;&#x4F60;&#x9700;&#x8981;&#x5220;&#x9664;&#x9501;&#x5B9A;&#x6587;&#x4EF6;&#x6765;&#x907F;&#x514D;&#x8BE5;&#x9519;&#x8BEF;&#x3002;</p>
+<p>&#x9996;&#x5148;&#x8FD0;&#x884C;&#x4E0B;&#x9762;&#x7684;&#x547D;&#x4EE4;&#x6765;&#x79FB;&#x9664; <strong>/var/lib/dpkg/</strong> &#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x7684;&#x9501;&#x5B9A;&#x6587;&#x4EF6;&#xFF1A;</p>
+<pre><code>sudo rm /var/lib/dpkg/lock
+</code></pre><p>&#x4E4B;&#x540E;&#x50CF;&#x4E0B;&#x9762;&#x8FD9;&#x6837;&#x5F3A;&#x5236;&#x91CD;&#x65B0;&#x914D;&#x7F6E;&#x8F6F;&#x4EF6;&#x5305;&#xFF1A;</p>
+<pre><code>sudo dpkg --configure -a
+</code></pre><p>&#x4E5F;&#x53EF;&#x4EE5;&#x5220;&#x9664; <strong>/var/lib/apt/lists/</strong> &#x4EE5;&#x53CA;&#x7F13;&#x5B58;&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x7684;&#x9501;&#x5B9A;&#x6587;&#x4EF6;&#xFF1A;</p>
+<pre><code>sudo rm /var/lib/apt/lists/lock
+sudo rm /var/cache/apt/archives/lock
+</code></pre><p>&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x66F4;&#x65B0;&#x4F60;&#x7684;&#x8F6F;&#x4EF6;&#x5305;&#x6E90;&#x5217;&#x8868;&#xFF1A;</p>
+<pre><code>sudo apt update
+
+&#x6216;&#x8005;
+sudo apt-get update
+</code></pre><blockquote>
+<p>&#x603B;&#x7ED3;&#x4E00;&#x4E0B;&#xFF0C;&#x5BF9;&#x4E8E; Ubuntu&#xFF08;&#x4EE5;&#x53CA;&#x5B83;&#x7684;&#x884D;&#x751F;&#x7248;&#xFF09;&#x7528;&#x6237;&#x5728;&#x4F7F;&#x7528; apt-get &#x6216;&#x8005; apt &#x4E5F;&#x53EB; aptitude &#x547D;&#x4EE4;[7]&#x65F6;&#x9047;&#x5230;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x7528;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;&#x6765;&#x89E3;&#x51B3;&#x4E86;&#x3002;</p>
+</blockquote>
+<hr>
+<blockquote>
+<p>&#x53C2;&#x8003;&#xFF1A; <a href="https://blog.csdn.net/u011596455/article/details/60322568" target="_blank">&#x5173;&#x4E8E;Ubuntu&#x4E2D;Could not get lock /var/lib/dpkg/lock&#x89E3;&#x51B3;&#x65B9;&#x6848;</a></p>
+</blockquote>
+
+                                </div>
+                                
+                                <!-- page -->
+
+                            </div>
+                            <div class="search-results">
+                                <div class="has-results">
+                                    
+                                    <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+                                    <ul class="search-results-list"></ul>
+                                    
+                                </div>
+                                <div class="no-results">
+                                    
+                                    <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <!-- search_result -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="gb-page-footer">
+        <div class="container footer-container">
+            <div class="copyright">
+                © 2018 <a href="https://zakariyya.github.io"> anan </a> | power by <a> zitiao.org</a>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script src="../../gitbook/gitbook.js"></script>
+
+    
+    <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+    
+
+    
+    <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+    
+
+
+<script>
+    var gitbook = gitbook || [];
+    gitbook.push(function() {
+        gitbook.page.hasChanged({"page":{"title":"ubuntu 源","level":"2.1","depth":1,"next":{"title":"JDK 安装","level":"2.2","depth":1,"path":"docs/base/JDK安装.md","ref":"docs/base/JDK安装.md","articles":[]},"previous":{"title":"About","level":"1.2","depth":1,"path":"docs/about.md","ref":"docs/about.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","-lunr","-search","search-pro","theme-official","sitemap-general"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sitemap-general":{"prefix":"http://zitiao.org/simple/"},"search-pro":{},"highlight":{},"theme-official":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","head_keywords":"wiki,文档,项目,部署","logo":"./images/logo.png","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"wiki","language":"zh-hans","head_title":"_wiki_urun","gitbook":">= 3.0.0","head_description":"项目部署文档"},"file":{"path":"docs/base/ubuntu源.md","mtime":"2020-03-26T09:24:50.624Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-26T09:54:50.930Z"},"basePath":"../..","book":{"language":""}});
+    });
+</script>
+<script>
+    $('.book-page-inner h1,.book-page-inner h2,.book-page-inner h3,.book-page-inner h4,.book-page-inner h5,.book-page-inner h6').click(function(){
+        var id = $(this).attr('id');
+        if(id) {
+            window.location.hash=id;
+        }
+    });
+</script>
+
+        
+    </body>
+</html>
+

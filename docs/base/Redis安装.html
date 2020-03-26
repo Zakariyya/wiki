@@ -1,0 +1,413 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Redis 安装_wiki_urun</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="项目部署文档">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    <meta name="keywords" content="wiki,文档,项目,部署">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="shortcut icon" href="../../../images/favicon.ico" type="image/x-icon">
+    
+    <link rel="stylesheet" href="../../assets/website/page_custom.min.css">
+    <script type="text/javascript" src="http://cdn.zitiao.org/www-tongji.js"></script>
+    
+    <link rel="next" href="Redis哨兵模式安装教程.html" />
+    
+    
+    <link rel="prev" href="MySQL安装.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="gb-page-wrapper">
+    <header class="gb-page-header">
+        <div class="container">
+        
+            <!-- search_input -->
+            <div id="book-search-input" role="search">
+                <input type="text" placeholder="输入并搜索" />
+            </div>
+            <!-- search_input -->
+
+            
+            <a href="../.." class="logo">
+                <img src="../../images/logo.png">
+                <!-- <img src="images/logo.png"/> -->
+            </a>
+            
+            <a href="../.." class="logo">
+                <h1 style="color: #FF5A9C">wiki</h1>
+            </a>
+        
+        </div>
+    </header>
+
+    <div class="gb-page-body">
+        <div class="gb-page-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        
+
+
+
+    
+    <div class="panel panel-default">
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="../../" class="list-group-item ">
+        
+
+            
+
+            
+
+            ReadMe
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../about.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            About
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+    <div class="panel panel-default">
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="ubuntu源.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            ubuntu 源
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="JDK安装.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            JDK 安装
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="MySQL安装.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            MySQL 安装
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="Redis安装.html" class="list-group-item active">
+        
+
+            
+
+            
+
+            Redis 安装
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="Redis哨兵模式安装教程.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis 哨兵模式安装教程
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="nginx安装.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            nginx 安装
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+    <div class="panel panel-default">
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="../wordpress/wordpress.md" class="list-group-item ">
+        
+
+            
+
+            
+
+            wordpress
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+
+
+
+                    </div>
+                    <div class="col-md-9">
+                        <!-- search_result -->
+                        <div id="book-search-results">
+                            <div class="search-noresults">
+                                
+                                <!-- page -->
+                                
+                                <div class="gb-markdown book-page-inner page-inner">
+                                    <h1 id="&#x5B89;&#x88C5;redis">&#x5B89;&#x88C5;redis</h1>
+<h2 id="&#x5B89;&#x88C5;&#x51C6;&#x5907;">&#x5B89;&#x88C5;&#x51C6;&#x5907;</h2>
+<blockquote>
+<p>&#x786E;&#x4FDD;&#x673A;&#x5B50;&#x80FD;&#x6267;&#x884C;&#x76F8;&#x5173;&#x547D;&#x4EE4;</p>
+</blockquote>
+<pre><code>apt install make gcc
+</code></pre><h2 id="&#x83B7;&#x53D6;redis&#x8D44;&#x6E90;">&#x83B7;&#x53D6;redis&#x8D44;&#x6E90;</h2>
+<p><code>wget http://download.redis.io/releases/redis-4.0.8.tar.gz</code></p>
+<h2 id="&#x89E3;&#x538B;">&#x89E3;&#x538B;</h2>
+<p><code>tar xzvf redis-4.0.8.tar.gz</code></p>
+<h2 id="&#x5B89;&#x88C5;">&#x5B89;&#x88C5;</h2>
+<pre><code class="lang-sh"><span class="hljs-built_in">cd</span> redis-4.0.8
+make
+make install
+<span class="hljs-built_in">cd</span> src
+make install PREFIX=/usr/<span class="hljs-built_in">local</span>/redis
+</code></pre>
+<h3 id="&#x51FA;&#x73B0;&#x4EE5;&#x4E0B;&#x9519;&#x8BEF;&#xFF08;&#x5047;&#x5982;&#x51FA;&#x73B0;&#x8BE5;&#x60C5;&#x51B5;&#xFF0C;&#x4E0D;&#x662F;&#x6BCF;&#x6B21;&#xFF09;">&#x51FA;&#x73B0;&#x4EE5;&#x4E0B;&#x9519;&#x8BEF;&#xFF08;&#x5047;&#x5982;&#x51FA;&#x73B0;&#x8BE5;&#x60C5;&#x51B5;&#xFF0C;&#x4E0D;&#x662F;&#x6BCF;&#x6B21;&#xFF09;</h3>
+<pre><code class="lang-sh">zmalloc.h:50:31: error: jemalloc/jemalloc.h: No such file or directory
+zmalloc.h:55:2: error: <span class="hljs-comment">#error &quot;Newer version of jemalloc required&quot;</span>
+make[1]: *** [adlist.o] Error 1
+make[1]: Leaving directory `/data0/src/redis-2.6.2/src<span class="hljs-string">&apos;
+make: *** [all] Error 2
+</span></code></pre>
+<h4 id="&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#xFF1A;">&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#xFF1A;</h4>
+<pre><code class="lang-sh">make MALLOC=libc
+</code></pre>
+<h2 id="&#x79FB;&#x52A8;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5230;&#x5B89;&#x88C5;&#x76EE;&#x5F55;&#x4E0B;">&#x79FB;&#x52A8;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5230;&#x5B89;&#x88C5;&#x76EE;&#x5F55;&#x4E0B;</h2>
+<pre><code class="lang-sh"><span class="hljs-built_in">cd</span> ..
+mkdir /usr/<span class="hljs-built_in">local</span>/redis/etc
+</code></pre>
+<h3 id="&#x4FEE;&#x6539;redis&#x542F;&#x52A8;&#x914D;&#x7F6E;&#x6587;&#x4EF6;">&#x4FEE;&#x6539;redis&#x542F;&#x52A8;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</h3>
+<h4 id="&#x6CE8;&#x91CA;&#x4EE5;&#x4E0B;&#x7ED1;&#x5B9A;&#x7684;&#x4E3B;&#x673A;&#x5730;&#x5740;">&#x6CE8;&#x91CA;&#x4EE5;&#x4E0B;&#x7ED1;&#x5B9A;&#x7684;&#x4E3B;&#x673A;&#x5730;&#x5740;</h4>
+<pre><code>vim /opt/redis-4.0.8/redis.conf
+
+# bind 127.0.0.1
+</code></pre><h4 id="redisconf-&#x4FEE;&#x6539;redis&#x7684;&#x4FDD;&#x62A4;&#x6A21;&#x5F0F;&#x4E3A;no&#xFF0C;&#x4E0D;&#x542F;&#x7528;">redis.conf &#x4FEE;&#x6539;redis&#x7684;&#x4FDD;&#x62A4;&#x6A21;&#x5F0F;&#x4E3A;no&#xFF0C;&#x4E0D;&#x542F;&#x7528;</h4>
+<pre><code>127.0.0.1:6379&gt; config set protected-mode &quot;no&quot; 
+
+&#x6216;&#x8005; 
+
+&#x4FEE;&#x6539; redis.conf &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;
+
+protected-mode&#x503C;&#x4E3A; no 
+daemonize &#x503C;&#x4E3A; yes ## &#x540E;&#x53F0;&#x542F;&#x52A8;
+
+cp redis.conf /usr/local/redis/etc
+</code></pre><ul>
+<li>&#x542F;&#x52A8;&#xFF08;&amp;&#x540E;&#x53F0;&#x542F;&#x52A8;&#xFF09;&#xFF1A;
+<code>redis-server /usr/local/redis/etc/redis.conf  &amp;</code></li>
+<li>&#x5173;&#x95ED;&#xFF1A;
+<code>redis-cli shutdown</code></li>
+</ul>
+<h2 id="redis&#x914D;&#x7F6E;&#x5BC6;&#x7801;">redis&#x914D;&#x7F6E;&#x5BC6;&#x7801;</h2>
+<ul>
+<li>&#x901A;&#x8FC7;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x914D;&#x7F6E;
+redis&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x901A;&#x5E38;&#x5728;/usr/local/redis/etc/redis.conf&#x4E2D;&#xFF0C;&#x6253;&#x5F00;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x627E;&#x5230;<pre><code>#requirepass foobared
+</code></pre></li>
+<li>&#x53BB;&#x6389;&#x884C;&#x524D;&#x7684;&#x6CE8;&#x91CA;&#xFF0C;&#x5E76;&#x4FEE;&#x6539;&#x5BC6;&#x7801;&#x4E3A;&#x6240;&#x9700;&#x7684;&#x5BC6;&#x7801;,&#x4FDD;&#x5B58;&#x6587;&#x4EF6;<pre><code>requirepass 123456
+</code></pre></li>
+<li>&#x91CD;&#x542F;redis</li>
+</ul>
+<h2 id="&#x67E5;&#x770B;redis&#x8FDB;&#x7A0B;">&#x67E5;&#x770B;redis&#x8FDB;&#x7A0B;</h2>
+<pre><code>ps -aux | grep redis
+</code></pre>
+                                </div>
+                                
+                                <!-- page -->
+
+                            </div>
+                            <div class="search-results">
+                                <div class="has-results">
+                                    
+                                    <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+                                    <ul class="search-results-list"></ul>
+                                    
+                                </div>
+                                <div class="no-results">
+                                    
+                                    <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <!-- search_result -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="gb-page-footer">
+        <div class="container footer-container">
+            <div class="copyright">
+                © 2018 <a href="https://zakariyya.github.io"> anan </a> | power by <a> zitiao.org</a>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script src="../../gitbook/gitbook.js"></script>
+
+    
+    <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+    
+
+    
+    <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+    
+
+
+<script>
+    var gitbook = gitbook || [];
+    gitbook.push(function() {
+        gitbook.page.hasChanged({"page":{"title":"Redis 安装","level":"2.4","depth":1,"next":{"title":"Redis 哨兵模式安装教程","level":"2.5","depth":1,"path":"docs/base/Redis哨兵模式安装教程.md","ref":"docs/base/Redis哨兵模式安装教程.md","articles":[]},"previous":{"title":"MySQL 安装","level":"2.3","depth":1,"path":"docs/base/MySQL安装.md","ref":"docs/base/MySQL安装.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","-lunr","-search","search-pro","theme-official","sitemap-general"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sitemap-general":{"prefix":"http://zitiao.org/simple/"},"search-pro":{},"highlight":{},"theme-official":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","head_keywords":"wiki,文档,项目,部署","logo":"./images/logo.png","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"wiki","language":"zh-hans","head_title":"_wiki_urun","gitbook":">= 3.0.0","head_description":"项目部署文档"},"file":{"path":"docs/base/Redis安装.md","mtime":"2020-03-26T09:24:50.622Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-26T09:54:50.930Z"},"basePath":"../..","book":{"language":""}});
+    });
+</script>
+<script>
+    $('.book-page-inner h1,.book-page-inner h2,.book-page-inner h3,.book-page-inner h4,.book-page-inner h5,.book-page-inner h6').click(function(){
+        var id = $(this).attr('id');
+        if(id) {
+            window.location.hash=id;
+        }
+    });
+</script>
+
+        
+    </body>
+</html>
+
