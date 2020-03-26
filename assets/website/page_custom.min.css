@@ -1,0 +1,19 @@
+
+.book-page-inner h1,
+.book-page-inner h2,
+.book-page-inner h3,
+.book-page-inner h4,
+.book-page-inner h5,
+.book-page-inner h6{cursor:pointer,font-color:#FFB4D2;}
+.footer-container{border-top:1px solid #FFB4D2;padding-top:10px}
+.footer-container 
+.copyright{text-align:center;font-size:12px;color:#FFB4D2}
+.gb-page-header 
+.container 
+.logo img{width:auto;height:40px;margin-right:10px;margin-top:0}
+.list-group 
+.list-group-item
+.active{color:#FFB4D2;border-left:1px solid #FFB4D2}
+.gb-markdown table{table-layout:fixed}
+a{color:#FFB4D2}
+a:hover{color:#FFB4D2}
