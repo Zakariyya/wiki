@@ -1,7 +1,7 @@
 {
     "root": "./",
     "title": "wiki",
-    "head_title": "_wiki_urun",
+    "head_title": "_wiki_anan",
     "head_description": "项目部署文档",
     "head_keywords": "wiki,文档,项目,部署",
     "logo": "./images/logo.png",
